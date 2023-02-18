@@ -5,10 +5,6 @@
 --| |_| |/ /| | | \ V  V /| || (_| \__ \ (_| |  _| (_| |___) | (_) |
 -- \__,_/_/ |_| |_|\_/\_/  \__\__,_|___/\__,_|_|  \__, |____/ \___/
 --                                                |___/
-
-
-
-
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
@@ -25,6 +21,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -62,7 +60,7 @@ beautiful.init(gears.filesystem.get_configuration_dir() .. "mytheme.lua")
 
 
 -- This is used later as the default terminal and editor to run.
-terminal = "kitty"
+terminal = "st"
 editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -210,34 +208,24 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Add widgets to the wibox
     s.mywibox:setup {
-        layout = wibox.layout.align.horizontal,
+	layout = wibox.layout.align.horizontal,
 	expand = "none",
         { -- Left widgets
-            layout = wibox.layout.fixed.horizontal,
-            mylauncher,
+            layout = wibox.layout.align.horizontal,
             s.mytaglist,
-            s.mypromptbox,
 	    s.mytasklist,
         },
-        mytextclock, --Middle Widget
+	mytextclock,
         { -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
---            mykeyboardlayout,
---            wibox.widget.systray(),
---            mytextclock,
+            layout = wibox.layout.align.horizontal,
+	    battery_widget(),
 	    wibox.widget.systray(),
---	    s.mytasklist,
+	    logout_popup.widget{},
         },
     }
 end)
 -- }}}
 
--- {{{ Mouse bindings
-root.buttons(gears.table.join(
-    awful.button({ }, 4, awful.tag.viewnext),
-    awful.button({ }, 5, awful.tag.viewprev)
-))
--- }}}
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
@@ -574,7 +562,7 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-awful.spawn.with_shell("setxkbmap tr")
+awful.spawn.single_instance("setxkbmap tr")
 awful.spawn.single_instance("xclip")
 awful.spawn.single_instance("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 awful.spawn.single_instance("picom")
