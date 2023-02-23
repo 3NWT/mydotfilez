@@ -28,7 +28,7 @@ local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popu
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 require("keybindings")
-
+require("autostart")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -350,11 +350,6 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-awful.spawn.with_shell("setxkbmap tr")
-awful.spawn.single_instance("xclip")
-awful.spawn.single_instance("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
-awful.spawn.single_instance("picom")
-awful.spawn.single_instance("nm-applet")
 -- Run garbage collector regularly to prevent memory leaks
 gears.timer {
        timeout = 30,
