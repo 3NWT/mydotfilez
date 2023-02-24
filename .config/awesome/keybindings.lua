@@ -19,9 +19,7 @@ local logout_popup = require("awesome-wm-widgets.logout-popup-widget.logout-popu
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
-
-
-local modkey = "Mod4"
+require("uservariables")
 
 
 -- {{{ Key bindings
