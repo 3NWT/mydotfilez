@@ -7,7 +7,8 @@ local autostart_apps = {
     "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1",
     "picom",
     "nm-applet",
-    "xrandr --output eDP1 --set scaling\\ mode Full"
+    "xrandr --output eDP1 --set scaling\\ mode Full",
+    "udiskie"
 }
 
 for app = 1, #autostart_apps do awful.spawn(autostart_apps[app], false) end
