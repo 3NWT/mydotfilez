@@ -8,7 +8,8 @@ local autostart_apps = {
     "picom",
     "nm-applet",
     "xrandr --output eDP1 --set scaling\\ mode Full",
-    "udiskie"
+    "udiskie",
+    "mopidy"
 }
 
 for app = 1, #autostart_apps do awful.spawn(autostart_apps[app], false) end

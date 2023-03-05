@@ -69,7 +69,7 @@ audio_output {
 ## visualizer.
 ##
 #
-visualizer_data_source = /tmp/mpd.fifo
+visualizer_data_source = "localhost:5555" 
 #
 ##
 ## Note: Below parameter is needed for ncmpcpp to determine which output
@@ -137,7 +137,7 @@ visualizer_spectrum_smooth_look = no
 #
 ## Right-most frequency of visualizer in Hz, must be greater than HZ MIN
 #
-#visualizer_spectrum_hz_max = 20000
+visualizer_spectrum_hz_max = 18000
 #
 ##### system encoding #####
 ##

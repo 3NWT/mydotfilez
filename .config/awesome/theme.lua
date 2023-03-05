@@ -15,7 +15,7 @@ theme.font          = "mononoki 10"
 
 theme.bg_normal     = "#002b3669"
 theme.bg_focus      = "#002b3600"
-theme.bg_urgent     = "#6c71c400"
+theme.bg_urgent     = "#6c71c4"
 theme.bg_minimize   = "#002b3600"
 theme.bg_systray    = theme.bg_normal
 
