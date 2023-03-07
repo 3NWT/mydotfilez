@@ -1,5 +1,4 @@
 call plug#begin('~/.local/share/nvim/plugged')
-
 Plug 'cocopon/iceberg.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'OmniSharp/omnisharp-vim'
@@ -14,18 +13,10 @@ Plug 'preservim/nerdtree'
 Plug 'puremourning/vimspector'
 Plug 'haya14busa/is.vim'
 Plug 'PhilRunninger/nerdtree-visual-selection'
-
-
-
-
+Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
-
-
-
-
-
-
-
+set termguicolors
+lua require'colorizer'.setup{lua = {RRGGBBAA = true;}}
 let g:ale_linters = { 'cs': ['OmniSharp'] }
 let NERDTreeShowHidden=1
 let g:vimspector_enable_mappings = 'HUMAN'
@@ -36,13 +27,6 @@ highlight clear LineNr
 hi Normal guibg=NONE ctermbg=NONE
 filetype indent plugin on
 syntax enable
-
-
-
-
-
-
-
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
 " utf-8 byte sequence
 set encoding=utf-8
