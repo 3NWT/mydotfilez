@@ -33,7 +33,6 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
-    awful.key({ modkey }, "l", function() logout_popup.launch() end, {description = "Show logout screen", group = "custom"}),
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
