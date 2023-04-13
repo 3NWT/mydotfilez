@@ -8,36 +8,19 @@
 
 window#waybar {
     background: rgba(0, 43, 54, 0.69);
-    border-radius: 15 15;
+    border-radius: 16 16;
     color: white;
 }
-
-tooltip {
-  background: rgba(0, 43, 54, 0.5);
-  border: 1px solid rgba(100, 114, 125, 0.5);
-}
-tooltip label {
-  color: white;
-}
-
 #workspaces button {
-    padding: 0 3px;
     background: transparent;
+    padding: 0;
     color: white;
 }
 
 #workspaces button.active {
-    background: transparent;
-    border-top: 1px solid @background;
-}
-
-#mode, #clock, #battery {
-    padding: 0 10px;
-}
-
-#mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+    background: rgba(38, 139, 210, 0.31);
+    border-radius: 8 8;
+    border-top: 1px solid white;
 }
 
 #clock {
