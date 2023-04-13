@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-    background: rgba(0, 43, 54, 0.69);
+    background: rgba(0, 43, 54, 0);
     border-radius: 16 16;
     color: white;
 }
@@ -29,7 +29,7 @@ window#waybar {
 }
 
 #battery {
-    background: rgba(0,0,0,0);
+    background: rgba(38,139,210,0);
     color: white;
 }
 
