@@ -10,7 +10,8 @@
         "format": "{capacity}%"
     },
     "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
-    }
+    "interval": 60,
+    "format": "{:%d/%m/%Y %H:%M}",
+}
 }
 
