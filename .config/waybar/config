@@ -12,6 +12,10 @@
     "clock": {
     "interval": 60,
     "format": "{:%d/%m/%Y %H:%M}",
-}
+},
+    "tray": {
+        "icon-size": 22,
+        "spacing": 1,
+    },
 }
 
