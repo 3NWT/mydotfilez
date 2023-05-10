@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-    background: rgba(0, 43, 54, 0.48);
+    background: rgba(16, 4, 24, 0);
     border-radius: 16 16;
     color: white;
 }
@@ -18,20 +18,20 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background: rgba(38, 139, 210, 0.32);
+    background: rgba(200, 24, 128, 0.69);
     border-radius: 8 8;
     border-top: 1px solid white;
 }
 
 #clock {
-    background: rgba(38,139,210,0.32);
+    background: rgba(200,24,128,0.69);
     padding: 0 8 0 8;
     border-radius: 8 8;
     color:white;
 }
 
 #battery {
-    background: rgba(38,139,210,0.32);
+    background: rgba(200,24,128,0.69);
     border-radius: 8 8;
     padding: 0 10 0 10;
     color: white;
@@ -41,7 +41,7 @@ window#waybar {
     color: white;
     padding: 0 16 0 26;
     border-radius: 8 8;
-    background: rgba(38,139,210,0.32);
+    background: rgba(200,24,128,0.69);
 }
 
 @keyframes blink {
@@ -63,6 +63,6 @@ window#waybar {
 #tray {
     padding: 0 8 0 8;
     border-radius: 8 8;
-    background: rgba(38,139,210,0.32);
+    background: rgba(200,24,128,0.69);
 
 }

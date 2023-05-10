@@ -1,5 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'cocopon/iceberg.vim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'dense-analysis/ale'
@@ -22,7 +23,7 @@ let NERDTreeShowHidden=1
 let g:vimspector_enable_mappings = 'HUMAN'
 set number
 set background=dark
-colorscheme iceberg
+colorscheme tokyonight-night
 highlight clear LineNr
 hi Normal guibg=NONE ctermbg=NONE
 filetype indent plugin on
