@@ -39,7 +39,7 @@ window#waybar {
 
 #battery.charging {
     color: white;
-    padding: 0 16 0 26;
+    padding: 0 16 0 16;
     border-radius: 8 8;
     background: rgba(200,24,128,0.69);
 }
