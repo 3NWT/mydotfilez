@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "coc-rust-analyzer": ">=0.73.0",
-    "coc-discord-rpc": ">=5.1.8",
-    "coc-clangd": ">=0.28.0"
-  }
-}
